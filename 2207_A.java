@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+public class 2207_A {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -10,7 +10,7 @@ class Solution {
             int n = sc.nextInt();
             char[] s = sc.next().toCharArray();
 
-            // Find maximum
+            // Maximum number of 1s
             for (int i = 1; i < n - 1; i++) {
                 if (s[i - 1] == '1' && s[i + 1] == '1') {
                     s[i] = '1';
@@ -24,7 +24,7 @@ class Solution {
                 }
             }
 
-            // Find minimum
+            // Minimum number of 1s
             for (int i = 1; i < n - 1; i++) {
                 if (s[i - 1] == '1' && s[i + 1] == '1') {
                     s[i] = '0';
@@ -46,5 +46,7 @@ class Solution {
 
             System.out.println(min + " " + max);
         }
+
+        sc.close();
     }
 }
